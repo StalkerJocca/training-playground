@@ -6,7 +6,7 @@ pipeline {
 	}
     stages {
     	stage ('first')
-	steps{
+	step{
 		createAndPrint("data")
 		sh "sleep 10"
 		createAndPrint("data2")
