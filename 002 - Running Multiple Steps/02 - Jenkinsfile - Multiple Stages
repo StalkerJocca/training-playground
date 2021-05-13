@@ -19,5 +19,5 @@ pipeline {
 }
 
 def printDate2File(filename){
-	
+	sh "date > $filename"
 }
