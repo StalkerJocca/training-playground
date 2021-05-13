@@ -5,5 +5,18 @@ pipeline {
 		}
 	}
     stages {
+    	stage ('first')
+	steps{
+		createAndPrint("data")
+		sh "sleep 10"
+		createAndPrint("data2")
+	}
     }
+}
+
+
+def createAndPrint(filename = ''){
+
+	sh "date > $filename && cat $filename"
+	
 }
